@@ -27,7 +27,6 @@ mongoose.connect(URL, {
     useNewUrlParser: true,
 });
 
-
 //mongo DB connection
 const connection = mongoose.connection;
 
