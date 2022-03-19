@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import logger from "./utils/logger";
 import 'dotenv/config';
+import { connect } from "./utils/DB.Connection";
 
 const app = express();
 const PORT = process.env.PORT || "8088";
@@ -16,4 +17,5 @@ app.get("/", (req, res, next) => {
 
 app.listen(PORT, () => {
     logger.info(`Sever is up and running on PORT ${PORT}`);
+    connect();
 });
