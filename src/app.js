@@ -11,11 +11,11 @@ app.use(cors());
 app.use(express.json({ limit: "20mb" }));
 
 app.get("/", (req, res, next) => {
-    res.send("<h2>Library system api</h2>");
+    res.send("<h2> 📚 Library system api</h2>");
     next();
 });
 
 app.listen(PORT, () => {
-    logger.info(`Sever is up and running on PORT ${PORT}`);
+    logger.info(`🌻 Sever is up and running on PORT ${PORT}`);
     connect();
 });
