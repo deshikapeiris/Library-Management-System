@@ -1,0 +1,10 @@
+{"web":{
+    "client_id":"307395998481-frfhojv0evgcfukcp7umdccr5jec0vok.apps.googleusercontent.com",
+    "project_id":"aerial-ceremony-344814",
+    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+    "token_uri":"https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret":"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",
+    "redirect_uris":["http://localhost:8090/auth/google/callback"]
+    }
+}
