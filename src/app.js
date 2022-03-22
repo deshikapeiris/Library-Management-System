@@ -1,10 +1,10 @@
+import 'dotenv/config';
 import express from "express";
 import cors from "cors";
 import passport from "passport";
 import session  from "express-session";
 import logger from "./utils/logger";
 import config from "./configs";
-import 'dotenv/config';
 import { connect } from "./utils/DB.Connection";
 import { googleAuth } from "./configs/google.auth"; 
 
@@ -16,15 +16,22 @@ app.use(express.json({ limit: "20mb" }));
 app.use(
     session({
         secret:config.SESSION_SECRET,
+        resave:false,
+        saveUninitialized:false,
+        cookie :{
+            secure:false,
+            expires:new Date (Date.now() + 10000),
+            maxAge:10000,
+        },
     })
-)
+);
 
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res, next) => {
-    res.send("<h2> 📚 Library system api</h2>");
+    res.send("<a href ='http://localhost:8090/auth/google'>Login with Google</a>");
     next();
 });
 
