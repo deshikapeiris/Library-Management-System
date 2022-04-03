@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Library Management System API",
     "main": "app.js",
-    "author": "Imanthi Erandi",
+    "author": "Deshika Peiris",
     "license": "MIT",
     "private": false,
     "scripts": {
