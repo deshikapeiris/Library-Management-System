@@ -47,6 +47,8 @@ app.use ("/user",userRouter);
 const recommendRouter = require ("../src/api/routes/recommend");
 app.use ("/recommend",recommendRouter);
 
+const borrowedRouter = require ("../src/api/routes/borrowed");
+app.use ("/borrowed",borrowedRouter);
 
 
 
