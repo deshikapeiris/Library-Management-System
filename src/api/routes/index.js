@@ -1,4 +1,6 @@
 import { authenticate } from "../middleware/auth.middleware";
+ import {user} from "../routes/user";
+ import {recommend} from "../routes/recommend";
 
 const routesInit =(app,passport) =>{
 app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}));

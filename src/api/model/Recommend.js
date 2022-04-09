@@ -2,48 +2,34 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const recommendSchema = new Schema({
     
-    regNo:{
+    authorName:{
         type:String,
         required:true
     },
-    name:{
+    bookName:{
         type:String,
         required:true
     },
-    dob :{
-        type:String,
-        required:true
-    },
-
-     address :{
+    subject :{
         type:String,
         required:true
     },
 
+    publications:{
+        type:String,
+        required:true
+    },
 
-	email :{
+
+	pYear :{
         type:String,
         required:true
     },
 	
-	 phoneNo :{
-        type:String,
-        required:true
-    },
-	
-    nic:{
-        type:String,
-        required:true
-    },
 
-    shift :{
-        type:String,
-        required:true
-    },
-   
-    regDate :{
+    edition :{
         type:String,
         required:true
    
@@ -51,5 +37,5 @@ const userSchema = new Schema({
 
 })
 
-const User = mongoose.model("User",userSchema);
-module.exports = User;
+const Recommend = mongoose.model("Recommend",recommendSchema);
+module.exports = Recommend;

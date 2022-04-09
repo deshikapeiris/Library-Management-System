@@ -38,9 +38,24 @@ app.get("/", (req, res, next) => {
     next();
 });
 
+
+
+//variable declaration 
+const userRouter = require ("../src/api/routes/user");
+app.use ("/user",userRouter);
+
+const recommendRouter = require ("../src/api/routes/recommend");
+app.use ("/recommend",recommendRouter);
+
+
+
+
+
 app.listen(PORT, () => {
     logger.info(`🌻 Sever is up and running on PORT ${PORT}`);
     connect();
     routesInit (app,passport);
     googleAuth(passport);
 });
+
+
