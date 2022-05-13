@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let Recommend = require("../model/Recommend");
+let Recommend = require("../../model/member/Recommend");
 
 
 //create
@@ -11,6 +11,8 @@ router.route ("/add").post((req,res) => {
     const publications = req.body.publications;
     const pYear= req.body.pYear; 
     const edition= req.body.edition;
+    const requestDate= req.body.requestDate;
+
    
    
 
@@ -22,7 +24,8 @@ router.route ("/add").post((req,res) => {
         subject,
         publications,
         pYear,
-        edition 
+        edition,
+        requestDate
        
       
 

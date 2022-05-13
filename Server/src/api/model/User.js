@@ -8,11 +8,29 @@ const userSchema = new Schema({
         type:String,
         required:true
     },
+
+    regDate :{
+        type:String,
+        required:true
+   
+    },
     name:{
         type:String,
         required:true
     },
-    dob :{
+    
+
+	email :{
+        type:String,
+        required:true
+    },
+
+    phoneNo :{
+        type:String,
+        required:true
+    },
+
+    area :{
         type:String,
         required:true
     },
@@ -22,17 +40,6 @@ const userSchema = new Schema({
         required:true
     },
 
-
-	email :{
-        type:String,
-        required:true
-    },
-	
-	 phoneNo :{
-        type:String,
-        required:true
-    },
-	
     nic:{
         type:String,
         required:true
@@ -41,13 +48,8 @@ const userSchema = new Schema({
     shift :{
         type:String,
         required:true
-    },
-   
-    regDate :{
-        type:String,
-        required:true
-   
     }
+     
 
 })
 
